@@ -5,7 +5,7 @@
 			<class name="e2e.testing.test.T001Register"></class>
 		</classes>
 	</test>
-	<test name="LogOut">
+	<!-- <test name="LogOut">
 		<classes>
 			<class name="e2e.testing.test.T003LogOut"></class>
 		</classes>
@@ -14,5 +14,5 @@
 		<classes>
 			<class name="e2e.testing.test.T002Login"></class>
 		</classes>
-	</test>
+	</test> -->
 </suite>

@@ -1,18 +1,16 @@
 package e2e.testing.test;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
-import e2e.testing.driver.WebDriverFactory;
+import e2e.testing.core.CoreTest;
 import e2e.testing.pages.LoginPage;
 
-public class T002Login extends WebDriverFactory{
+public class T002Login extends CoreTest{
 
 	@Test
 	public void test() {
 		LoginPage login = new LoginPage(getDriver());
-		getDriver().get("http://localhost:4000");
-		
-		login.login("saul", "saul");
+		getDriver().get("http://marca.com");
+		wait(3000);
+		//login.login("saul", "saul");
 	}
 }
