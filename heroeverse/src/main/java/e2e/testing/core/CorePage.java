@@ -1,5 +1,7 @@
 package e2e.testing.core;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,20 +21,20 @@ public class CorePage {
 		return driver;
 	}
 
-	public WebElement locateElement(String xpath) {
-		waitForElement(By.xpath(xpath));
-		return driver.findElement(By.xpath(xpath));
+	public WebElement locateElement(By by) {
+		waitForElement(by);
+		return driver.findElement(by);
 	}
 	
-	public void writeOn(String xpath, String text) {
-		WebElement element = locateElement(xpath);
+	public void writeOn(By by, String text) {
+		WebElement element = locateElement(by);
 		element.clear();
 		element.sendKeys(text);
 	}
 	
-	public void click(String xpath) {
-		waitForElement(By.xpath(xpath));
-		WebElement element = locateElement(xpath);
+	public void click(By by) {
+		waitForElement(by);
+		WebElement element = locateElement(by);
 		element.click();
 	}
 	
@@ -45,6 +47,14 @@ public class CorePage {
 		waitForElement(by, secondsToWait);
 	}
 	
+	public List<WebElement> locateElements(By by){
+		try{
+			waitForElement(by);
+		}catch(Exception e){
+			
+		}
+		return driver.findElements(by);
+	}
 	
 	public void wait(int ms) {
 		try {

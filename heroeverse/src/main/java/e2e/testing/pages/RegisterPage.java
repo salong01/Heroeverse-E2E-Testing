@@ -1,10 +1,9 @@
 package e2e.testing.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import e2e.testing.core.CorePage;
-
-public class RegisterPage extends CorePage{
+public class RegisterPage extends HeroeversePage{
 
 	private static final String REGISTER_USERNAME = "//input[@id='username']";
 	private static final String REGISTER_EMAIL = "//input[@id='email']";
@@ -17,12 +16,17 @@ public class RegisterPage extends CorePage{
 	}
 	
 	public void register(String user, String email, String pass, String confirmPass) {
-		getDriverPage().get("http://google.com");
-//		System.out.println(getDriverPage().getCurrentUrl());
-		writeOn(REGISTER_USERNAME, user);
-//		writeOn(REGISTER_EMAIL, email);
-//		writeOn(REGISTER_PASS, pass);
-//		writeOn(REGISTER_CONFIRM_PASS, confirmPass);
-//		click(BUTTON_REGISTER);
+		if(!(getDriverPage().getCurrentUrl().equals("http://localhost:4000/register")))
+				getDriverPage().get("http://localhost:4000/register");
+		wait(1000);
+		writeOn(By.xpath(REGISTER_USERNAME), user);
+		wait(1000);
+		writeOn(By.xpath(REGISTER_EMAIL), email);
+		wait(1000);
+		writeOn(By.xpath(REGISTER_PASS), pass);
+		wait(1000);
+		writeOn(By.xpath(REGISTER_CONFIRM_PASS), confirmPass);
+		wait(1000);
+		click(By.xpath(BUTTON_REGISTER));
 	}
 }

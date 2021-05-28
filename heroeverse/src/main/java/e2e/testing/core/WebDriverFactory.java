@@ -26,11 +26,10 @@ public class WebDriverFactory {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
-//			System.setProperty("webdriver.chrome.driver", "D:chromedriver.exe");
 			driver = new ChromeDriver(options);
-//			driver.manage().window().maximize();
-//			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
 			}
 		return driver;
 	}
 }
+

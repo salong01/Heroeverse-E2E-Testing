@@ -1,20 +1,23 @@
 package e2e.testing.test;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import e2e.testing.core.CoreTest;
 import e2e.testing.pages.RegisterPage;
 
 public class T001Register extends CoreTest{
 
-	@Test
+	@Override
+	public void startTest() {
+	}
+
+	@Override
 	public void runTest() {
 		
 		RegisterPage register = new RegisterPage(getDriver());
-//		Assert.assertTrue(false);
-//		getDriver().get("http://google.com");
-//		wait(3000);
-		
+		getLogger().add("Register user saul");
 		register.register("saul", "saul.alonso.glez@gmail.com", "saul", "saul");
+	}
+	
+	@Override
+	public void endTest() {
 	}
 }
