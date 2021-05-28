@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CorePage {
 	
+	private final String heroeverseUrl = "http://localhost:4000";
 	private int secondsToWait = 5;
 	private WebDriver driver;
 	
@@ -61,5 +62,9 @@ public class CorePage {
 			Thread.sleep(ms);
 		}catch (InterruptedException e) {
 		}
+	}
+	
+	public String getHeroeverseUrl() {
+		return heroeverseUrl;
 	}
 }

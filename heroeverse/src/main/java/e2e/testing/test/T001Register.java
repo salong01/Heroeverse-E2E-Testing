@@ -14,7 +14,7 @@ public class T001Register extends CoreTest{
 		
 		RegisterPage register = new RegisterPage(getDriver());
 		getLogger().add("Register user saul");
-		register.register("saul", "saul.alonso.glez@gmail.com", "saul", "saul");
+		register.register("saaaul", "saul.alonso.glez@gmail.com", "saul", "saul");
 	}
 	
 	@Override

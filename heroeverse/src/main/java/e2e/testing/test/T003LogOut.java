@@ -17,8 +17,8 @@ public class T003LogOut extends CoreTest{
 		getLogger().add("Log out from user");
 		login.logout();
 		getLogger().add("Check if user is really log out");
-		Assert.assertTrue(login.isUserLogged());
-		getLogger().add("");
+		Assert.assertFalse(login.isUserLogged());
+		getLogger().add("User is really logged out");
 	}
 
 	@Override
