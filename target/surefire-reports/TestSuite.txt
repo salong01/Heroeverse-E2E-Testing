@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 53.691 s <<< FAILURE! - in TestSuite
+e2e.testing.test.T001Register.test  Time elapsed: 7.612 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='username'] (tried for 5 second(s) with 500 milliseconds interval)
+	at e2e.testing.test.T001Register.runTest(T001Register.java:17)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='username']"}
+  (Session info: chrome=91.0.4472.77)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-de-Saul.local', ip: 'fe80:0:0:0:1c5d:9f20:31c:4284%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: /var/folders/v6/13rlqr1x6d7...}, goog:chromeOptions: {debuggerAddress: localhost:49980}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fbf47a44a3707785f976fddfd03d3d5
+*** Element info: {Using=xpath, value=//input[@id='username']}
+	at e2e.testing.test.T001Register.runTest(T001Register.java:17)
+
+e2e.testing.test.T003LogOut.test  Time elapsed: 5.214 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //button[@id='menu'] (tried for 5 second(s) with 500 milliseconds interval)
+	at e2e.testing.test.T003LogOut.runTest(T003LogOut.java:18)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='menu']"}
+  (Session info: chrome=91.0.4472.77)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-de-Saul.local', ip: 'fe80:0:0:0:1c5d:9f20:31c:4284%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: /var/folders/v6/13rlqr1x6d7...}, goog:chromeOptions: {debuggerAddress: localhost:49980}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fbf47a44a3707785f976fddfd03d3d5
+*** Element info: {Using=xpath, value=//button[@id='menu']}
+	at e2e.testing.test.T003LogOut.runTest(T003LogOut.java:18)
+
+e2e.testing.test.T002Login.test  Time elapsed: 6.393 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='username'] (tried for 5 second(s) with 500 milliseconds interval)
+	at e2e.testing.test.T002Login.runTest(T002Login.java:16)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='username']"}
+  (Session info: chrome=91.0.4472.77)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-de-Saul.local', ip: 'fe80:0:0:0:1c5d:9f20:31c:4284%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: /var/folders/v6/13rlqr1x6d7...}, goog:chromeOptions: {debuggerAddress: localhost:49980}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fbf47a44a3707785f976fddfd03d3d5
+*** Element info: {Using=xpath, value=//*[@id='username']}
+	at e2e.testing.test.T002Login.runTest(T002Login.java:16)
+
+e2e.testing.test.T004HeroesInformation.test  Time elapsed: 10.406 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //button[@id='menu'] (tried for 5 second(s) with 500 milliseconds interval)
+	at e2e.testing.test.T004HeroesInformation.runTest(T004HeroesInformation.java:37)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='menu']"}
+  (Session info: chrome=91.0.4472.77)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-de-Saul.local', ip: 'fe80:0:0:0:1c5d:9f20:31c:4284%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: /var/folders/v6/13rlqr1x6d7...}, goog:chromeOptions: {debuggerAddress: localhost:49980}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fbf47a44a3707785f976fddfd03d3d5
+*** Element info: {Using=xpath, value=//button[@id='menu']}
+	at e2e.testing.test.T004HeroesInformation.runTest(T004HeroesInformation.java:37)
+

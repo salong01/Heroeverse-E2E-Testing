@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Prototype]" verbose="0">
+  <test thread-count="5" name="RegisterUser(failed)" verbose="0">
+    <classes>
+      <class name="e2e.testing.test.T001Register">
+        <methods>
+          <include name="test"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- e2e.testing.test.T001Register -->
+    </classes>
+  </test> <!-- RegisterUser(failed) -->
+  <test thread-count="5" name="LogOut(failed)" verbose="0">
+    <classes>
+      <class name="e2e.testing.test.T003LogOut">
+        <methods>
+          <include name="test"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- e2e.testing.test.T003LogOut -->
+    </classes>
+  </test> <!-- LogOut(failed) -->
+  <test thread-count="5" name="LoginUser(failed)" verbose="0">
+    <classes>
+      <class name="e2e.testing.test.T002Login">
+        <methods>
+          <include name="test"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- e2e.testing.test.T002Login -->
+    </classes>
+  </test> <!-- LoginUser(failed) -->
+  <test thread-count="5" name="CheckHeroesInformation(failed)" verbose="0">
+    <classes>
+      <class name="e2e.testing.test.T004HeroesInformation">
+        <methods>
+          <include name="test"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- e2e.testing.test.T004HeroesInformation -->
+    </classes>
+  </test> <!-- CheckHeroesInformation(failed) -->
+</suite> <!-- Failed suite [Prototype] -->

@@ -1,0 +1,12 @@
+e2e/testing/pages/RegisterPage.class
+e2e/testing/test/T001Register.class
+e2e/testing/core/WebDriverFactory.class
+e2e/testing/test/T002Login.class
+e2e/testing/pages/HeroeversePage.class
+e2e/testing/core/CorePage.class
+e2e/testing/core/CoreTest.class
+e2e/testing/test/T003LogOut.class
+e2e/testing/pages/LoginPage.class
+e2e/testing/core/Logger.class
+e2e/testing/test/T004HeroesInformation.class
+e2e/testing/pages/HeroesPage.class
