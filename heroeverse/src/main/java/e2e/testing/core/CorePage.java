@@ -1,7 +1,6 @@
 package e2e.testing.core;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,8 +17,13 @@ public class CorePage {
 		this.driver = driver;
 	}
 	
-	public WebDriver getDriverPage() {
-		return driver;
+	public void waitForElement(By by) {
+		waitForElement(by, secondsToWait);
+	}
+
+	public void waitForElement(By by, int secs) {
+		WebDriverWait waiter = new WebDriverWait(driver, secs);
+		waiter.until(ExpectedConditions.presenceOfElementLocated(by));
 	}
 
 	public WebElement locateElement(By by) {
@@ -39,15 +43,6 @@ public class CorePage {
 		element.click();
 	}
 	
-	public void waitForElement(By by, int secs) {
-		WebDriverWait waiter = new WebDriverWait(driver, secs);
-		waiter.until(ExpectedConditions.presenceOfElementLocated(by));
-	}
-	
-	public void waitForElement(By by) {
-		waitForElement(by, secondsToWait);
-	}
-	
 	public List<WebElement> locateElements(By by){
 		try{
 			waitForElement(by);
@@ -62,6 +57,10 @@ public class CorePage {
 			Thread.sleep(ms);
 		}catch (InterruptedException e) {
 		}
+	}
+	
+	public WebDriver getDriverPage() {
+		return driver;
 	}
 	
 	public String getHeroeverseUrl() {
