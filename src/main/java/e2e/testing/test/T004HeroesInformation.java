@@ -33,21 +33,28 @@ public class T004HeroesInformation extends CoreTest{
 		
 		getLogger().add("Check if user is logged");
 		heroesPage.isUserLogged();
+		
 		getLogger().add("Go to heroes view in case we aren't");
 		heroesPage.heroList();
+		
+		getLogger().add("Check that length of parameters are the same");
 		assertTrue(heroName.length==heroFaction.length && heroName.length==heroDescription.length, "Length of arrays are not the same, test will fail");
+		
 		getLogger().add("Check every hero information stored in database");
-		for(int i = 0; i< heroName.length; i++) {
+		for(int i = 0; i < heroName.length; i++) {
 			wait(1000);
 			getLogger().add("Click hero " + heroName[i] + " to check information");
 			heroesPage.clickHero(heroName[i]);
 			wait(1000);
+			
 			getLogger().add("Check hero name");
 			assertEquals(heroName[i], heroesPage.getHeroName(), "Hero is not the same as expected, name received " + heroesPage.getHeroName());
 			assertEquals(heroFaction[i], heroesPage.getHeroFaction(), "Faction is not the same text as expected, faction received "+ heroesPage.getHeroFaction());
 			assertEquals(heroDescription[i], heroesPage.getHeroDesciption(), "Description is not the same as expected, .");
 			assertTrue(heroesPage.getHeroImage().contains(heroName[i].replaceAll(" ", "%20").replace("á", "%C3%A1").replace("é", "%C3%A9")), "Image is not the same as expected.");
-			heroesPage.heroList();
+			heroesPage.back();
+			wait(1000);
+			assertTrue(getDriver().getCurrentUrl().equals("http://localhost:4000/heroes"));
 		}
 	}
 
