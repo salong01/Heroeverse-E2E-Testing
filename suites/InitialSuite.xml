@@ -9,15 +9,35 @@
 		<classes>
 			<class name="e2e.testing.test.T003LogOut"></class>
 		</classes>
-	</test> 
+	</test>
 	<test name="LoginUser">
 		<classes>
 			<class name="e2e.testing.test.T002Login"></class>
 		</classes>
-	</test>
+	</test> 
 	<test name="CheckHeroesInformation">
 		<classes>
 			<class name="e2e.testing.test.T004HeroesInformation"></class>
+		</classes>
+	</test>
+	<test name="AddHero">
+		<classes>
+			<class name="e2e.testing.test.T005AddHeroToUserList"></class>
+		</classes>
+	</test>
+	<test name="RemoveHero">
+		<classes>
+			<class name="e2e.testing.test.T006RemoveHeroFromUserList"></class>
+		</classes>
+	</test>
+	<test name="WrongRegisterUser">
+		<classes>
+			<class name="e2e.testing.test.T007WrongRegister"></class>
+		</classes>
+	</test>
+	<test name="WrongLoginUser">
+		<classes>
+			<class name="e2e.testing.test.T008WrongLogin"></class>
 		</classes>
 	</test>
 </suite>
