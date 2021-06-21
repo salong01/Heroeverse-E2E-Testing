@@ -24,7 +24,7 @@ public class T008WrongLogin extends CoreTest{
 		
 		getLogger().add("Go to login page and login with user " + user);
 		login.login(user, pass);
-		
+		wait(1000);
 		getLogger().add("Check if user " + user + " can see the menu");
 		assertFalse(login.isUserLogged(), "user not logged");
 		

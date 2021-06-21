@@ -27,9 +27,9 @@ public class T007WrongRegister extends CoreTest{
 		
 		getLogger().add("Register user " + user);
 		register.register(user, email, pass, pass);
-		
+		wait(1000);
 		getLogger().add("Check if user " + user + " can see the menu");
-		Assert.assertFalse(register.isUserLogged());
+		Assert.assertFalse(register.isUserLogged(), "User had been registered");
 		
 		getLogger().add("Chech that url is the register one");
 		assertTrue(getDriver().getCurrentUrl().equals("http://localhost:4000/register"));
