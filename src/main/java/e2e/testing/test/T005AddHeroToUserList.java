@@ -2,9 +2,6 @@ package e2e.testing.test;
 
 import e2e.testing.core.CoreTest;
 import static org.testng.Assert.assertTrue;
-
-import org.openqa.selenium.By;
-
 import e2e.testing.pages.HeroesPage;
 
 public class T005AddHeroToUserList extends CoreTest{
