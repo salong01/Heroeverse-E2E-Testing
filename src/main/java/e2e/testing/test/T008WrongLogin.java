@@ -22,6 +22,10 @@ public class T008WrongLogin extends CoreTest{
 		
 		LoginPage login = new LoginPage(getDriver());
 		
+		if(login.isUserLogged()) {
+			getLogger().add("Log out");
+			login.logout();
+		}
 		getLogger().add("Go to login page and login with user " + user);
 		login.login(user, pass);
 		wait(1000);

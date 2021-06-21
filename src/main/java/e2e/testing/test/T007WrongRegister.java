@@ -25,6 +25,11 @@ public class T007WrongRegister extends CoreTest{
 
 		RegisterPage register = new RegisterPage(getDriver());
 		
+		if(register.isUserLogged()) {
+			getLogger().add("Log out");
+			register.logout();
+		}
+		register.logout();
 		getLogger().add("Register user " + user);
 		register.register(user, email, pass, pass);
 		wait(1000);

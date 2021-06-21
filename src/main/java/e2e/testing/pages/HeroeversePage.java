@@ -27,7 +27,6 @@ public class HeroeversePage extends CorePage{
 	}
 	
 	public boolean isUserLogged() {
-		System.out.println(locateElements(By.xpath(BUTTON_USER_MENU)).size());
 		if(locateElements(By.xpath(BUTTON_USER_MENU)).size()==0)
 			return false;
 		return true;
